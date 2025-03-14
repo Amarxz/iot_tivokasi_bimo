@@ -1,0 +1,25 @@
+{
+    "version": 1,
+    "author": "Anonymous maker",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+      {
+        "type": "wokwi-hc-sr04",
+        "id": "ultrasonic1",
+        "top": -8.1,
+        "left": 139.9,
+        "rotate": 90,
+        "attrs": {}
+      }
+    ],
+    "connections": [
+      [ "esp:TX", "$serialMonitor:RX", "", [] ],
+      [ "esp:RX", "$serialMonitor:TX", "", [] ],
+      [ "ultrasonic1:GND", "esp:GND.3", "black", [ "v31.2", "h-76.64" ] ],
+      [ "ultrasonic1:ECHO", "esp:18", "green", [ "v60.4", "h-76.64" ] ],
+      [ "ultrasonic1:TRIG", "esp:5", "green", [ "h-23.8", "v80" ] ],
+      [ "ultrasonic1:VCC", "esp:5V", "red", [ "v-34.8", "h-206.2", "v211.2" ] ]
+    ],
+    "dependencies": {}
+  }
